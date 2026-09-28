@@ -10,12 +10,12 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['pwa-icon.svg'],
+      includeAssets: ['pwa-icon.svg', 'logo.png'],
       manifest: {
         id: '/',
-        name: 'Fake Attendance',
-        short_name: 'Attendance',
-        description: 'Student attendance and academic dashboard',
+        name: 'Student Dirary Cloude',
+        short_name: 'Student Dirary',
+        description: 'Student diary and academic dashboard',
         theme_color: '#087f73',
         background_color: '#f5f5f5',
         display: 'standalone',
@@ -24,6 +24,12 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
+          {
+            src: '/logo.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
           {
             src: '/pwa-icon.svg',
             sizes: 'any',
