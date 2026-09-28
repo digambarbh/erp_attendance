@@ -10,11 +10,11 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['pwa-icon.svg', 'logo.png'],
+      includeAssets: ['pwa-icon.svg', 'logo.png', 'logo-192.png'],
       manifest: {
         id: '/',
         name: 'Student Dirary Cloude',
-        short_name: 'Student Dirary',
+        short_name: 'Student Dirary Cloude',
         description: 'Student diary and academic dashboard',
         theme_color: '#087f73',
         background_color: '#f5f5f5',
@@ -24,6 +24,12 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
+          {
+            src: '/logo-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any',
+          },
           {
             src: '/logo.png',
             sizes: '512x512',
