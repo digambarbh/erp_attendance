@@ -12,7 +12,13 @@ export default defineConfig({
       registerType: "autoUpdate",
 
       includeAssets: [
-        "pwa-icon.svg",
+        "favicon.ico",
+        "apple-touch-icon.png",
+        "pwa-192.png",
+        "pwa-512.png",
+        "maskable-512.png",
+        "logo.png",
+        "logo-192.png",
       ],
 
       manifest: {
@@ -53,6 +59,15 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
+      },
+
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}"],
+        navigateFallback: "/index.html",
+      },
+
+      devOptions: {
+        enabled: true,
       },
     }),
   ],

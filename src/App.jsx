@@ -22,6 +22,7 @@ import NotFoundPage from "./pages/not-found";
 import NoticesPage from "./pages/notices";
 import ProfilePage from "./pages/profile";
 import ServicePage from "./pages/service";
+import InstallPrompt from "./components/InstallPrompt";
 
 function Header() {
     return (
@@ -129,6 +130,7 @@ export default function App() {
                     </Routes>
                 </div>
             </main>
+            <InstallPrompt />
             {pathname !== "/academic/attendance" && <BottomNavigation />}
         </div>
     );
