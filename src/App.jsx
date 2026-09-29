@@ -1,10 +1,4 @@
-import {
-    Bell,
-    Contact,
-    House,
-    MessageSquare,
-    UserRound,
-} from "lucide-react";
+import { useEffect, useState } from "react";
 import {
     NavLink,
     Route,
@@ -24,7 +18,31 @@ import ProfilePage from "./pages/profile";
 import ServicePage from "./pages/service";
 import InstallPrompt from "./components/InstallPrompt";
 
+function getGreeting() {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) {
+        return "Good Morning";
+    }
+    if (hour >= 12 && hour < 17) {
+        return "Good Afternoon";
+    }
+    if (hour >= 17 && hour < 21) {
+        return "Good Evening";
+    }
+    return "Good Night";
+}
+
 function Header() {
+    const [greeting, setGreeting] = useState(getGreeting);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setGreeting(getGreeting());
+        }, 60000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <header className="px-[10px] pb-[16px] pt-[20px]">
             <div className="flex items-center justify-between">
@@ -41,8 +59,8 @@ function Header() {
 
                     {/* Student Name */}
                     <div className="min-w-0">
-                        <p className="mb-[2px] text-[11px] font-normal leading-[13px] text-[#666666]">
-                            Good Afternoon
+                        <p className="mb-[2px] text-[13px] font-normal leading-[15px] text-[#666666]">
+                            {greeting}
                         </p>
 
                         <h1 className="whitespace-nowrap text-[16px] font-semibold uppercase leading-[1.35] tracking-[0.1px] text-[#3F3F3F]">
@@ -66,13 +84,92 @@ function Header() {
     );
 }
 
+/* =========================================================
+   BOTTOM NAVIGATION ICONS (Google Material Icons Outlined)
+========================================================= */
+
+function HomeNavIcon({ size = 24, className = "" }) {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
+        </svg>
+    );
+}
+
+function MessageNavIcon({ size = 24, className = "" }) {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M4 4h16v12H5.17L4 17.17V4m0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4zm2 10h12v2H6v-2zm0-3h12v2H6V9zm0-3h12v2H6V6z" />
+        </svg>
+    );
+}
+
+function IdCardNavIcon({ size = 24, className = "" }) {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M19 2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h4l3 3 3-3h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16h-4.83l-.59.59L12 20.17l-1.59-1.59-.58-.58H5V4h14v14zm-7-7c1.65 0 3-1.35 3-3s-1.35-3-3-3-3 1.35-3 3 1.35 3 3 3zm0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm6 8.58c0-2.5-3.97-3.58-6-3.58s-6 1.08-6 3.58V17h12v-1.42zM8.48 15c.74-.51 2.23-1 3.52-1s2.78.49 3.52 1H8.48z" />
+        </svg>
+    );
+}
+
+function NoticeNavIcon({ size = 24, className = "" }) {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+        </svg>
+    );
+}
+
+function ProfileNavIcon({ size = 24, className = "" }) {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
+        </svg>
+    );
+}
+
 function BottomNavigation() {
     const navigation = [
-        { label: "Home", icon: House, to: "/" },
-        { label: "Message", icon: MessageSquare, to: "/messages" },
-        { label: "Id Card", icon: Contact, to: "/id-card" },
-        { label: "Notice", icon: Bell, to: "/notices" },
-        { label: "Profile", icon: UserRound, to: "/profile" },
+        { label: "Home", icon: HomeNavIcon, to: "/" },
+        { label: "Message", icon: MessageNavIcon, to: "/messages" },
+        { label: "Id Card", icon: IdCardNavIcon, to: "/id-card" },
+        { label: "Notice", icon: NoticeNavIcon, to: "/notices" },
+        { label: "Profile", icon: ProfileNavIcon, to: "/profile" },
     ];
 
     return (
@@ -90,15 +187,23 @@ function BottomNavigation() {
                             to={item.to}
                             end={item.to === "/"}
                             aria-label={item.label}
-                            className={({ isActive }) => `relative flex flex-col items-center justify-center gap-[3px] ${isActive ? "text-[#087F73]" : "text-[#A0A0A0]"}`}
+                            className={({ isActive }) =>
+                                `relative flex flex-col items-center justify-center gap-[3px] ${
+                                    isActive
+                                        ? "text-[#087F73] font-medium"
+                                        : "text-[#757575] font-normal"
+                                }`
+                            }
                         >
                             {({ isActive }) => (
                                 <>
                                     {isActive && (
-                                        <span className="absolute left-0 right-0 top-0 h-[4px] bg-[#087F73]" />
+                                        <span className="absolute left-[7px] right-[7px] top-0 h-[3.5px] rounded-[1px] bg-[#087F73]" />
                                     )}
-                                    <Icon size={22} strokeWidth={isActive ? 2.5 : 2} />
-                                    <span className="text-[10px] leading-none">{item.label}</span>
+                                    <Icon size={24} className="shrink-0" />
+                                    <span className="text-[11px] leading-tight tracking-[0.1px]">
+                                        {item.label}
+                                    </span>
                                 </>
                             )}
                         </NavLink>
