@@ -13,17 +13,6 @@ import {
   Award,
   TrainFront,
   Star,
-  FileText,
-  FileCheck,
-  CreditCard,
-  HelpCircle,
-  Download,
-  ShieldCheck,
-  BusFront,
-  GraduationCap,
-  BookCopy,
-  ClipboardCheck,
-  IdCard,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -229,50 +218,6 @@ const serviceItems = [
   {
     label: "Feedback",
     icon: Star,
-  },
-  {
-    label: "Application",
-    icon: FileText,
-  },
-  {
-    label: "Document Verification",
-    icon: FileCheck,
-  },
-  {
-    label: "Fee Payment",
-    icon: CreditCard,
-  },
-  {
-    label: "Help & Support",
-    icon: HelpCircle,
-  },
-  {
-    label: "Download Forms",
-    icon: Download,
-  },
-  {
-    label: "Student Verification",
-    icon: ShieldCheck,
-  },
-  {
-    label: "Bus Pass",
-    icon: BusFront,
-  },
-  {
-    label: "Scholarship",
-    icon: GraduationCap,
-  },
-  {
-    label: "Study Material",
-    icon: BookCopy,
-  },
-  {
-    label: "Applications",
-    icon: ClipboardCheck,
-  },
-  {
-    label: "Student ID",
-    icon: IdCard,
   },
 ];
 
