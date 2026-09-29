@@ -184,10 +184,10 @@ function AttendanceCard({
                     className="
             min-w-0
             flex-1
-            text-[14px]
+            text-[16px]
             font-medium
             uppercase
-            leading-[20px]
+            leading-[22px]
             text-[#555]
           "
                 >
@@ -200,9 +200,9 @@ function AttendanceCard({
             shrink-0
             whitespace-nowrap
             pt-[1px]
-            text-[14px]
+            text-[16px]
             font-semibold
-            leading-[19px]
+            leading-[21px]
             text-[#087f73]
           "
                 >
@@ -215,8 +215,8 @@ function AttendanceCard({
             <p
                 className="
           mt-[8px]
-          text-[13px]
-          leading-[18px]
+          text-[15px]
+          leading-[20px]
           text-[#555]
         "
             >
@@ -228,8 +228,8 @@ function AttendanceCard({
             <p
                 className="
           mt-[2px]
-          text-[13px]
-          leading-[18px]
+          text-[15px]
+          leading-[20px]
           text-[#555]
         "
             >
@@ -241,9 +241,9 @@ function AttendanceCard({
             <p
                 className="
           mt-[15px]
-          text-[14px]
+          text-[16px]
           font-semibold
-          leading-[17px]
+          leading-[19px]
           text-[#4caf50]
         "
             >
@@ -296,8 +296,8 @@ function AttendanceCard({
           grid
           grid-cols-3
           items-center
-          text-[11px]
-          leading-[14px]
+          text-[13px]
+          leading-[16px]
           text-[#777]
         "
             >
