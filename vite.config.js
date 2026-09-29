@@ -33,7 +33,7 @@ export default defineConfig({
         theme_color: "#087F73",
         background_color: "#F5F5F5",
 
-        display: "standalone",
+        "display": "fullscreen",
         orientation: "portrait",
 
         start_url: "/",
