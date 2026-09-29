@@ -29,7 +29,7 @@ function CircularProgress({ percentage, color, label }) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[66px] w-[66px]">
+      <div className="relative h-[68px] w-[68px]">
         <svg
           viewBox="0 0 120 120"
           className="h-full w-full -rotate-90"
@@ -57,13 +57,13 @@ function CircularProgress({ percentage, color, label }) {
         </svg>
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[10px] font-semibold text-[#505050]">
+          <span className="text-[12px] font-semibold text-[#505050]">
             {percentage.toFixed(2)}%
           </span>
         </div>
       </div>
 
-      <span className="mt-[6px] text-[14px] leading-[17px] text-[#4B4B4B]">
+      <span className="mt-[6px] text-[16px] leading-[19px] text-[#4B4B4B]">
         {label}
       </span>
     </div>
@@ -77,12 +77,12 @@ function CircularProgress({ percentage, color, label }) {
 function AttendanceSection() {
   return (
     <section className="mt-[14px]">
-      <h2 className="mb-[10px] px-[10px] text-[16px] font-semibold leading-[20px] text-[#484848]">
+      <h2 className="mb-[10px] px-[10px] text-[18px] font-semibold leading-[22px] text-[#484848]">
         Attendance
       </h2>
 
       <div className="grid grid-cols-3 gap-[6px] px-[10px]">
-        <div className="flex h-[111px] items-center justify-center rounded-[5px] bg-white">
+        <div className="flex h-[113px] items-center justify-center rounded-[5px] bg-white">
           <CircularProgress
             percentage={52.5}
             color="#4CAF50"
@@ -90,7 +90,7 @@ function AttendanceSection() {
           />
         </div>
 
-        <div className="flex h-[111px] items-center justify-center rounded-[5px] bg-white">
+        <div className="flex h-[113px] items-center justify-center rounded-[5px] bg-white">
           <CircularProgress
             percentage={68.75}
             color="#FF9800"
@@ -98,7 +98,7 @@ function AttendanceSection() {
           />
         </div>
 
-        <div className="flex h-[111px] items-center justify-center rounded-[5px] bg-white">
+        <div className="flex h-[113px] items-center justify-center rounded-[5px] bg-white">
           <CircularProgress
             percentage={60.63}
             color="#087F73"
