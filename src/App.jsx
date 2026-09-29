@@ -88,7 +88,7 @@ function Header() {
    BOTTOM NAVIGATION ICONS (Google Material Icons Outlined)
 ========================================================= */
 
-function HomeNavIcon({ size = 24, className = "" }) {
+function HomeNavIcon({ size = 25, className = "" }) {
     return (
         <svg
             width={size}
@@ -103,7 +103,7 @@ function HomeNavIcon({ size = 24, className = "" }) {
     );
 }
 
-function MessageNavIcon({ size = 24, className = "" }) {
+function MessageNavIcon({ size = 25, className = "" }) {
     return (
         <svg
             width={size}
@@ -118,7 +118,7 @@ function MessageNavIcon({ size = 24, className = "" }) {
     );
 }
 
-function IdCardNavIcon({ size = 24, className = "" }) {
+function IdCardNavIcon({ size = 25, className = "" }) {
     return (
         <svg
             width={size}
@@ -133,7 +133,7 @@ function IdCardNavIcon({ size = 24, className = "" }) {
     );
 }
 
-function NoticeNavIcon({ size = 24, className = "" }) {
+function NoticeNavIcon({ size = 25, className = "" }) {
     return (
         <svg
             width={size}
@@ -148,7 +148,7 @@ function NoticeNavIcon({ size = 24, className = "" }) {
     );
 }
 
-function ProfileNavIcon({ size = 24, className = "" }) {
+function ProfileNavIcon({ size = 25, className = "" }) {
     return (
         <svg
             width={size}
@@ -177,7 +177,7 @@ function BottomNavigation() {
             aria-label="Primary navigation"
             className="fixed bottom-0 left-0 z-50 w-full border-t border-[#EEEEEE] bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_8px_rgba(0,0,0,0.08)]"
         >
-            <div className="grid h-[55px] w-full grid-cols-5">
+            <div className="grid h-[63px] w-full grid-cols-5">
                 {navigation.map((item) => {
                     const Icon = item.icon;
 
@@ -200,7 +200,7 @@ function BottomNavigation() {
                                     {isActive && (
                                         <span className="absolute left-[7px] right-[7px] top-0 h-[3.5px] rounded-[1px] bg-[#087F73]" />
                                     )}
-                                    <Icon size={24} className="shrink-0" />
+                                    <Icon size={26} className="shrink-0" />
                                     <span className="text-[11px] leading-tight tracking-[0.1px]">
                                         {item.label}
                                     </span>
