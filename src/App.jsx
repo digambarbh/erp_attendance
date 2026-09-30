@@ -50,11 +50,11 @@ function Header() {
                 <div className="flex min-w-0 items-center gap-[10px]">
                     {/* Profile Image */}
                     <div className="h-[48px] w-[48px] shrink-0 overflow-hidden rounded-full border-[2px] border-white bg-[#DCEBED] shadow-[0_1px_4px_rgba(0,0,0,0.12)]">
-                        <img
+                        {/* <img
                             src={profileImage}
                             alt="Digambar Sukhdev Bhujbal"
                             className="h-full w-full object-cover"
-                        />
+                        /> */}
                     </div>
 
                     {/* Student Name */}
