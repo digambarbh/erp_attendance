@@ -64,9 +64,9 @@ function Header() {
                         </p>
 
                         <h1 className="whitespace-nowrap text-[16px] font-semibold uppercase leading-[1.35] tracking-[0.1px] text-[#3F3F3F]">
-                            DIGAMBAR SUKHDEV
+                            Pratik Barsu
                             <br />
-                            BHUJBAL
+                            Bornare
                         </h1>
                     </div>
                 </div>
