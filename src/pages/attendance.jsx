@@ -82,10 +82,10 @@ const attendanceData = [
         subject: "BLOCKCHAIN TECHNOLOGY",
         code: "24CS508T",
         faculty: "MONALI CHAUDHARI",
-        percentage: 63,
+        percentage: 50,
         total: 27,
-        present: 17,
-        absent: 10,
+        present: 8,
+        absent: 9,
   },
 {
     subject: "CYBER SECURITY CONCEPTS AND PRINCIPLES",
